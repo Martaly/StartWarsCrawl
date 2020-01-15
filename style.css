@@ -15,13 +15,14 @@ section {
 } 
 .intro {
   $intro-width: 15em;
-  width: $intro-width;
-  margin: 0 0 0 (- $intro-width / 2);
+  width: 100%;
+  padding: center;
   font-size: 200%;
   font-weight: 400;
   color: rgb(75, 213, 238);
   opacity: 0;
-  animation: intro 80s ease-out infinite;
+  animation-name : intro;
+  animation-duration: 8s;
   text-align: center;
 }
 @keyframes intro {
@@ -110,32 +111,39 @@ section {
   }
 }
 .logo {
-  opacity: 0;
-  animation: logo 80s ease-out infinite; 
-  position: absolute;
-  left: 25%;
-  text-align: center;
-  transform: translateY(-50%);
-  width: 100%;
+    opacity: 1;
+    animation-name: logo;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    transform: translateY(-50%);
+    animation-delay: 8s;
+    animation-duration: 5s;
+}  
+
   
   
   svg {
     width: inherit;
   }
 }
-@keyframes logo {
-	9% { 
-   transform: translateX(-50%) translateY(-50%) scale(2); 
+@keyframes logo 
+{
+	9% 
+    { 
+    transform: translateX(-50%) translateY(-50%) scale(3); 
     opacity: 0; 
-  }
-	9.1% { 
+    }
+	9.1% 
+    { 
     opacity: 1;  
-  }
-	14% { 
+    }
+    14% 
+    {
     opacity: 1;
-    
-  18% {
-    transform: translateX(-50%) translateY(-50%) scale(0.1);;
-  }
-  }
+    }
+    18% 
+    {
+    transform: translateX(-50%) translateY(-50%) scale(0.1);
+    }
 }
