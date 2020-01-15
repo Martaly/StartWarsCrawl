@@ -22,8 +22,10 @@ section {
   color: rgb(75, 213, 238);
   opacity: 0;
   animation-name : intro;
-  animation-duration: 8s;
+  animation-duration: 3s;
   text-align: center;
+  
+
 }
 @keyframes intro {
   0% {
@@ -39,12 +41,12 @@ section {
     opacity: 0;
   }
 }
+
 .fade {
   position: relative;
   width: 100%;
   min-height: 60vh;
-  top: -25px;
-  background-image: linear-gradient(0deg, transparent, black 75%);
+  
   z-index: 1;
 }
 
@@ -64,10 +66,11 @@ section {
 }
 
 .crawl {
-  position: relative;
-  top: 9999px;
-  transform-origin: 50% 100%;
-  animation: crawl 60s linear;
+    position: relative;
+    top: 9999px;
+    transform-origin: 50% 100%;
+    animation: crawl 60s linear;
+    animation-delay: 3s;
 }
 
 .crawl > .title {
@@ -81,6 +84,7 @@ section {
 	  overflow: hidden;
     transform-origin: 50% 100%;
     @include transform(perspective(300px) rotateX(25deg));
+    
 }
 
 .crawl > .title h1 {
@@ -111,39 +115,35 @@ section {
   }
 }
 .logo {
-    opacity: 1;
+    opacity: 0;
     animation-name: logo;
     width: 100%;
     margin: auto;
     text-align: center;
     transform: translateY(-50%);
-    animation-delay: 8s;
+    animation-delay: 3s;
     animation-duration: 5s;
+    animation-iteration-count: 1;
 }  
-
-  
-  
-  svg {
-    width: inherit;
-  }
-}
 @keyframes logo 
 {
-	9% 
-    { 
-    transform: translateX(-50%) translateY(-50%) scale(3); 
-    opacity: 0; 
-    }
-	9.1% 
-    { 
-    opacity: 1;  
-    }
-    14% 
+	0% 
     {
-    opacity: 1;
-    }
-    18% 
+        transform: scale(1); opacity: 1;
+	}
+    50%
     {
-    transform: translateX(-50%) translateY(-50%) scale(0.1);
+        opacity: 1;
     }
+    100% 
+    {
+        transform: scale(0.1); opacity: 0;
+    }
+}
+.audio{
+    animation-name: audio;
+    animation-delay: 5s;
+    animation-iteration-count: 1;
+
+
 }
